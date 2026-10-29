@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Đang chuyển hướng · Germa IO</title>
+</head>
+<body>
+<p>Đang chuyển về ứng dụng cục bộ. Nếu trang không tự chuyển, hãy đóng tab này.</p>
+<script>
+  // Forwards TikTok's OAuth redirect (code, state, scopes, error) to the local
+  // listener started by scripts/tiktok_connect.py. Only the query string is passed.
+  (function () {
+    var target = "http://localhost:3455/callback/" + window.location.search;
+    window.location.replace(target);
+  })();
+</script>
+</body>
+</html>
